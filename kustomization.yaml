@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - resources/namespace.yaml
+  - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+#patchesStrategicMerge:
+#  - overlays/workflow-controller-configmap.yaml
+#  - overlays/argo-server-role.yaml
+#  - overlays/argo-server-sa.yaml
+#  - overlays/argo-server-deploy.yaml
+
+namespace: argocd
