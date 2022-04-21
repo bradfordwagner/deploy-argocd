@@ -5,10 +5,7 @@ resources:
   - resources/namespace.yaml
   - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-#patchesStrategicMerge:
-#  - overlays/workflow-controller-configmap.yaml
-#  - overlays/argo-server-role.yaml
-#  - overlays/argo-server-sa.yaml
-#  - overlays/argo-server-deploy.yaml
+patchesStrategicMerge:
+  - overlays/nodeport.yaml
 
 namespace: argocd
