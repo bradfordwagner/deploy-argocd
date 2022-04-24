@@ -7,5 +7,6 @@ resources:
 
 patchesStrategicMerge:
   - overlays/nodeport.yaml
+  - overlays/configmap.yaml
 
 namespace: argocd
