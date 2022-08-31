@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+  name: argocd-redis
+spec:
+  template:
+    spec:
+      containers:
+      # original redis:7.0.4-alpine
+      - image: quay.io/bradfordwagner/redis:1.0.0-redis-7.0.4-alpine
+        name: redis
