@@ -8,5 +8,5 @@ spec:
     spec:
       containers:
       # original redis:7.0.4-alpine
-      - image: ghcr.io/bradfordwagner/redis-mirror:1.1.0-redis_7.0.4-alpine
+      - image: ghcr.io/bradfordwagner/redis-mirror:1.2.0-redis_7.0.14-alpine
         name: redis
