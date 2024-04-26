@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - https://raw.githubusercontent.com/argoproj/argo-cd/v2.10.7/manifests/install.yaml
+  - ./secrets/in-cluster.yaml
 
 patchesStrategicMerge:
   - overlays/nodeport.yaml
@@ -10,4 +11,3 @@ patchesStrategicMerge:
   - overlays/redis.yaml
 
 namespace: argocd
-
