@@ -6,12 +6,13 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - http:
-      paths:
-      - path: /argocd
-        pathType: Prefix
-        backend:
-          service:
-            name: argocd-server
-            port:
-              number: 443
+    - host: localhost
+      http:
+        paths:
+          - backend:
+              service:
+                name: argocd-server
+                port:
+                  number: 443
+            path: /argocd
+            pathType: Prefix
